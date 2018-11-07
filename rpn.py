@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from colored import fore, back, style
+
 def calculate(arg):
     stack = []
 
@@ -11,13 +13,19 @@ def calculate(arg):
         except ValueError:
             val2 = stack.pop()
             val1 = stack.pop()
+            print(val1, end='')
             if token == '+':
                 result = val1 + val2
+                print(fore.GREEN + '+' + style.RESET, end='')
             elif token == '-':
                 result = val1 - val2
+                print (fore.RED + '-' + style.RESET, end='')
             elif token == '^':
                 result = val1 ** val2
+                print (fore.YELLOW + '^' + style.RESET, end='')
             
+            print(val2, end='')
+            print(' ' + back.WHITE + fore.BLACK + '=' + style.RESET + ' ', end='')
             stack.append(result)
 
     if len(stack) > 1:

@@ -5,6 +5,4 @@ install:
  - pip3 install pytest-cov
 script:
  - pytest
-after_success:
  - py.test --cov=. test_rpn.py
- - coverage report

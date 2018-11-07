@@ -22,8 +22,8 @@ def calculate(arg):
                 print (fore.RED + '-' + style.RESET, end='')
             elif token == '^':
                 result = val1 ** val2
-            elif token == '*':
-                result = val1 * val2
+#            elif token == '*':
+#                result = val1 * val2
                 print (fore.YELLOW + '^' + style.RESET, end='')
             
             print(val2, end='')

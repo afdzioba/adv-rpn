@@ -3,6 +3,7 @@ python:
  - "3.6"
 install:
  - pip3 install pytest-cov
+ - pip3 install colored
 script:
  - pytest
  - py.test --cov=. test_rpn.py

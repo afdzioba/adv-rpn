@@ -7,3 +7,4 @@ script:
  - pytest
 after_success:
  - py.test --cov=. test_rpn.py
+ - coverage report
